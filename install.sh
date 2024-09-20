@@ -38,7 +38,7 @@ export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
 echo -e "\nPrivate key has been set."
 echo
 
-export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia'
+export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l3rn'
 
 read -p "KEY ALCHEMY: " KEYALCHEMY
 
