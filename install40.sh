@@ -44,7 +44,7 @@ export RPC_ENDPOINTS_ARBT='https://arb-sepolia.g.alchemy.com/v2/V57W5XD-wVcublXo
 export RPC_ENDPOINTS_BSSP='https://base-sepolia.g.alchemy.com/v2/V57W5XD-wVcublXoMUC-Exv0wuNQARoO,https://base-sepolia.infura.io/v3/3002e05888084dc1a49e181697c021ed,https://sepolia.base.org'
 export RPC_ENDPOINTS_BLSS='https://blast-sepolia.g.alchemy.com/v2/V57W5XD-wVcublXoMUC-Exv0wuNQARoO,https://blast-sepolia.infura.io/v3/3002e05888084dc1a49e181697c021ed,https://sepolia.blast.io'
 export RPC_ENDPOINTS_OPSP='https://opt-sepolia.g.alchemy.com/v2/V57W5XD-wVcublXoMUC-Exv0wuNQARoO,https://optimism-sepolia.infura.io/v3/3002e05888084dc1a49e181697c021ed,https://sepolia.optimism.io'
-
+export RPC_ENDPOINTS_OPSP='https://brn.rpc.caldera.xyz/http'
 
 
 sleep 2
