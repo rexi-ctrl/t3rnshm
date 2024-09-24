@@ -47,6 +47,7 @@ export RPC_ENDPOINTS_OPSP='https://opt-sepolia.g.alchemy.com/v2/uDorUCFfkmofzS7j
 
 
 
+
 sleep 2
 echo "Starting the Executor..."
 ./executor
