@@ -40,10 +40,10 @@ echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
-export RPC_ENDPOINTS_ARBT='https://arb-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-,https://arbitrum-sepolia.infura.io/v3/07bed2c1a3254edab8ef08fd9636532e,https://sepolia-rollup.arbitrum.io/rpc'
-export RPC_ENDPOINTS_BSSP='https://base-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-,https://base-sepolia.infura.io/v3/07bed2c1a3254edab8ef08fd9636532e,https://sepolia.base.org'
-export RPC_ENDPOINTS_BLSS='https://blast-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-,https://blast-sepolia.infura.io/v3/07bed2c1a3254edab8ef08fd9636532e,https://sepolia.blast.io'
-export RPC_ENDPOINTS_OPSP='https://opt-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-,https://optimism-sepolia.infura.io/v3/07bed2c1a3254edab8ef08fd9636532e,https://sepolia.optimism.io'
+export RPC_ENDPOINTS_ARBT='https://arbitrum-sepolia.infura.io/v3/be4d8cc119624b4cb72fd28955e3954c,https://sepolia-rollup.arbitrum.io/rpc'
+export RPC_ENDPOINTS_BSSP='https://base-sepolia.infura.io/v3/be4d8cc119624b4cb72fd28955e3954c,https://sepolia.base.org'
+export RPC_ENDPOINTS_BLSS='https://blast-sepolia.infura.io/v3/be4d8cc119624b4cb72fd28955e3954c,https://sepolia.blast.io'
+export RPC_ENDPOINTS_OPSP='https://optimism-sepolia.infura.io/v3/be4d8cc119624b4cb72fd28955e3954c,https://sepolia.optimism.io'
 
 
 
