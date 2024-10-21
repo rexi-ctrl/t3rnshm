@@ -40,10 +40,10 @@ echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
-export RPC_ENDPOINTS_ARBT='https://arbitrum-sepolia.infura.io/v3/06027815b9b6441c83e37fbb4bed5a32,https://sepolia-rollup.arbitrum.io/rpc'
-export RPC_ENDPOINTS_BSSP='https://base-sepolia.infura.io/v3/06027815b9b6441c83e37fbb4bed5a32,https://sepolia.base.org'
-export RPC_ENDPOINTS_BLSS='https://blast-sepolia.infura.io/v3/06027815b9b6441c83e37fbb4bed5a32,https://sepolia.blast.io'
-export RPC_ENDPOINTS_OPSP='https://optimism-sepolia.infura.io/v3/06027815b9b6441c83e37fbb4bed5a32,https://sepolia.optimism.io'
+export RPC_ENDPOINTS_ARBT='https://sepolia-rollup.arbitrum.io/rpc'
+export RPC_ENDPOINTS_BSSP='https://sepolia.base.org'
+export RPC_ENDPOINTS_BLSS='https://sepolia.blast.io'
+export RPC_ENDPOINTS_OPSP='https://sepolia.optimism.io'
 
 
 
