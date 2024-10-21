@@ -9,8 +9,8 @@ sudo apt -q update
 sudo apt -qy upgrade
 
 
-EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.21.8/executor-linux-v0.21.8.tar.gz"
-EXECUTOR_FILE="executor-linux-v0.21.8.tar.gz"
+EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.21.9/executor-linux-v0.21.9.tar.gz"
+EXECUTOR_FILE="executor-linux-v0.21.9.tar.gz"
 
 echo "Downloading the Executor binary from $EXECUTOR_URL..."
 curl -L -o $EXECUTOR_FILE $EXECUTOR_URL
@@ -38,7 +38,7 @@ export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
 echo -e "\nPrivate key has been set."
 echo
 
-export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
+export ENABLED_NETWORKS='base-sepolia,blast-sepolia,l1rn'
 
 
 
