@@ -31,6 +31,8 @@ echo
 export NODE_ENV=testnet
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
+export EXECUTOR_PROCESS_ORDERS=false
+export EXECUTOR_PROCESS_CLAIMS=true
 
 
 read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
@@ -40,10 +42,10 @@ echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
-export RPC_ENDPOINTS_ARBT='https://arbitrum-sepolia.infura.io/v3/3002e05888084dc1a49e181697c021ed'
-export RPC_ENDPOINTS_BSSP='https://base-sepolia.infura.io/v3/3002e05888084dc1a49e181697c021ed'
-export RPC_ENDPOINTS_BLSS='https://blast-sepolia.infura.io/v3/3002e05888084dc1a49e181697c021ed'
-export RPC_ENDPOINTS_OPSP='https://optimism-sepolia.infura.io/v3/3002e05888084dc1a49e181697c021ed'
+export RPC_ENDPOINTS_ARBT='https://arbitrum-sepolia.infura.io/v3/42b8e37678a642969080ea429fc577b4'
+export RPC_ENDPOINTS_BSSP='https://base-sepolia.infura.io/v3/42b8e37678a642969080ea429fc577b4'
+export RPC_ENDPOINTS_BLSS='https://blast-sepolia.infura.io/v3/42b8e37678a642969080ea429fc577b4'
+export RPC_ENDPOINTS_OPSP='https://optimism-sepolia.infura.io/v3/42b8e37678a642969080ea429fc577b4'
 
 
 sleep 2
