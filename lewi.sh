@@ -31,6 +31,8 @@ echo
 export NODE_ENV=testnet
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
+export EXECUTOR_PROCESS_ORDERS=false
+export EXECUTOR_PROCESS_CLAIMS=true
 
 
 read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
