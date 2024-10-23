@@ -47,7 +47,6 @@ export RPC_ENDPOINTS_BSSP='https://base-sepolia.infura.io/v3/42b8e37678a64296908
 export RPC_ENDPOINTS_BLSS='https://blast-sepolia.infura.io/v3/42b8e37678a642969080ea429fc577b4'
 export RPC_ENDPOINTS_OPSP='https://optimism-sepolia.infura.io/v3/42b8e37678a642969080ea429fc577b4'
 
-export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
 
 sleep 2
 echo "Starting the Executor..."
