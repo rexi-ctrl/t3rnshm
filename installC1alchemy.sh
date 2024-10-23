@@ -47,7 +47,7 @@ export RPC_ENDPOINTS_BSSP='https://base-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219
 export RPC_ENDPOINTS_BLSS='https://blast-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-'
 export RPC_ENDPOINTS_OPSP='https://opt-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-'
 
-export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
+
 sleep 2
 echo "Starting the Executor..."
 ./executor
