@@ -5,6 +5,7 @@ sleep 1
 
 cd $HOME
 rm -rf executor
+sleep 1
 sudo apt -q update
 sudo apt -qy upgrade
 
@@ -32,6 +33,9 @@ export NODE_ENV=testnet
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
 
+read -p "Executor Process Order (input true atau false): " KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_ORDERS=$KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_CLAIMS=true
 
 read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
 export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
@@ -40,6 +44,12 @@ echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
+read -p "KEY ALCHEMY: " KEYALCHEMY
+
+export RPC_ENDPOINTS_ARBT="https://arb-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
+export RPC_ENDPOINTS_BSSP="https://base-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
+export RPC_ENDPOINTS_BLSS="https://blast-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
+export RPC_ENDPOINTS_OPSP="https://opt-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 
 
 sleep 2
