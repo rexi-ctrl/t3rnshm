@@ -46,10 +46,10 @@ export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-se
 
 read -p "KEY ALCHEMY: " KEYALCHEMY
 
-export RPC_ENDPOINTS_ARBT="https://arb-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
-export RPC_ENDPOINTS_BSSP="https://base-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
-export RPC_ENDPOINTS_BLSS="https://blast-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
-export RPC_ENDPOINTS_OPSP="https://opt-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
+export RPC_ENDPOINTS_ARBT="https://rpc.ankr.com/arbitrum_sepolia/5716c79ee22c3e291cf3ae075c8d392aa0177f47f5ebea32db388e01f9f97762"
+export RPC_ENDPOINTS_BSSP="https://rpc.ankr.com/base_sepolia/5716c79ee22c3e291cf3ae075c8d392aa0177f47f5ebea32db388e01f9f97762"
+export RPC_ENDPOINTS_BLSS="https://rpc.ankr.com/blast_testnet_sepolia/5716c79ee22c3e291cf3ae075c8d392aa0177f47f5ebea32db388e01f9f97762"
+export RPC_ENDPOINTS_OPSP="https://rpc.ankr.com/optimism_sepolia/5716c79ee22c3e291cf3ae075c8d392aa0177f47f5ebea32db388e01f9f97762"
 
 
 sleep 2
