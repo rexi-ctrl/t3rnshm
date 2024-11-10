@@ -5,6 +5,7 @@ sleep 1
 
 cd $HOME
 rm -rf executor
+sleep 1
 sudo apt -q update
 sudo apt -qy upgrade
 
@@ -32,6 +33,9 @@ export NODE_ENV=testnet
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
 
+read -p "Executor Process Order (input true atau false): " KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_ORDERS=$KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_CLAIMS=true
 
 read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
 export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
