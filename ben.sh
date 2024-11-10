@@ -5,12 +5,13 @@ sleep 1
 
 cd $HOME
 rm -rf executor
+sleep 1
 sudo apt -q update
 sudo apt -qy upgrade
 
 
-EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.21.10/executor-linux-v0.21.10.tar.gz"
-EXECUTOR_FILE="executor-linux-v0.21.10.tar.gz"
+EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.22.0/executor-linux-v0.22.0.tar.gz"
+EXECUTOR_FILE="executor-linux-v0.22.0.tar.gz"
 
 echo "Downloading the Executor binary from $EXECUTOR_URL..."
 curl -L -o $EXECUTOR_FILE $EXECUTOR_URL
@@ -31,9 +32,10 @@ echo
 export NODE_ENV=testnet
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
-export EXECUTOR_PROCESS_ORDERS=true
-export EXECUTOR_PROCESS_CLAIMS=true
 
+read -p "Executor Process Order (input true atau false): " KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_ORDERS=$KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_CLAIMS=true
 
 read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
 export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
@@ -42,11 +44,14 @@ echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
-export RPC_ENDPOINTS_ARBT='https://arb-sepolia.g.alchemy.com/v2/bBNu7asB3DxNIoXnDG8DdZ6inTn1Q99T'
-export RPC_ENDPOINTS_BSSP='https://base-sepolia.g.alchemy.com/v2/bBNu7asB3DxNIoXnDG8DdZ6inTn1Q99T'
-export RPC_ENDPOINTS_BLSS='https://blast-sepolia.g.alchemy.com/v2/bBNu7asB3DxNIoXnDG8DdZ6inTn1Q99T'
-export RPC_ENDPOINTS_OPSP='https://opt-sepolia.g.alchemy.com/v2/bBNu7asB3DxNIoXnDG8DdZ6inTn1Q99T'
+read -p "KEY ALCHEMY: " KEYALCHEMY
 
+export RPC_ENDPOINTS_ARBT="https://arb-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
+export RPC_ENDPOINTS_BSSP="https://base-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
+export RPC_ENDPOINTS_BLSS="https://blast-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
+export RPC_ENDPOINTS_OPSP="https://opt-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
+
+export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
 
 sleep 2
 echo "Starting the Executor..."
