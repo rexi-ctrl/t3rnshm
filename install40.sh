@@ -44,10 +44,8 @@ echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
-export RPC_ENDPOINTS_ARBT="https://rpc.ankr.com/arbitrum_sepolia/5716c79ee22c3e291cf3ae075c8d392aa0177f47f5ebea32db388e01f9f97762"
-export RPC_ENDPOINTS_BSSP="https://rpc.ankr.com/base_sepolia/5716c79ee22c3e291cf3ae075c8d392aa0177f47f5ebea32db388e01f9f97762"
-export RPC_ENDPOINTS_BLSS="https://rpc.ankr.com/blast_testnet_sepolia/5716c79ee22c3e291cf3ae075c8d392aa0177f47f5ebea32db388e01f9f97762"
-export RPC_ENDPOINTS_OPSP="https://rpc.ankr.com/optimism_sepolia/5716c79ee22c3e291cf3ae075c8d392aa0177f47f5ebea32db388e01f9f97762"
+export RPC_ENDPOINTS_ARBT="https://api.zan.top/node/v1/arb/sepolia/db8dde88e5b4488eb5ae10951dceffc4"
+export RPC_ENDPOINTS_OPSP="https://api.zan.top/node/v1/opt/sepolia/db8dde88e5b4488eb5ae10951dceffc4"
 
 
 sleep 2
