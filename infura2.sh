@@ -51,6 +51,7 @@ export RPC_ENDPOINTS_BSSP="https://base-sepolia.infura.io/v3/$KEYALCHEMY"
 export RPC_ENDPOINTS_BLSS="https://blast-sepolia.infura.io/v3/$KEYALCHEMY"
 export RPC_ENDPOINTS_OPSP="https://optimism-sepolia.infura.io/v3/$KEYALCHEMY"
 
+export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
 sleep 2
 echo "Starting the Executor..."
 ./executor
