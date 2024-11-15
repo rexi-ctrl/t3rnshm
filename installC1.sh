@@ -5,12 +5,13 @@ sleep 1
 
 cd $HOME
 rm -rf executor
+sleep 1
 sudo apt -q update
 sudo apt -qy upgrade
 
 
-EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.21.9/executor-linux-v0.21.9.tar.gz"
-EXECUTOR_FILE="executor-linux-v0.21.9.tar.gz"
+EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.22.0/executor-linux-v0.22.0.tar.gz"
+EXECUTOR_FILE="executor-linux-v0.22.0.tar.gz"
 
 echo "Downloading the Executor binary from $EXECUTOR_URL..."
 curl -L -o $EXECUTOR_FILE $EXECUTOR_URL
@@ -32,6 +33,9 @@ export NODE_ENV=testnet
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
 
+read -p "Executor Process Order (input true atau false): " KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_ORDERS=$KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_CLAIMS=true
 
 read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
 export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
@@ -40,12 +44,10 @@ echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
-export RPC_ENDPOINTS_ARBT='https://arbitrum-sepolia.infura.io/v3/be4d8cc119624b4cb72fd28955e3954c,https://sepolia-rollup.arbitrum.io/rpc'
-export RPC_ENDPOINTS_BSSP='https://base-sepolia.infura.io/v3/be4d8cc119624b4cb72fd28955e3954c,https://sepolia.base.org'
-export RPC_ENDPOINTS_BLSS='https://blast-sepolia.infura.io/v3/be4d8cc119624b4cb72fd28955e3954c,https://sepolia.blast.io'
-export RPC_ENDPOINTS_OPSP='https://optimism-sepolia.infura.io/v3/be4d8cc119624b4cb72fd28955e3954c,https://sepolia.optimism.io'
-
-
+export RPC_ENDPOINTS_ARBT="https://arb-sepolia.g.alchemy.com/v2/jUwBIRQ5knBpowzY_uyP9HSpxwqqyFc2,https://arb-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-,https://arb-sepolia.g.alchemy.com/v2/s9be-rgIj3nI63sMjGQMLiV97cM3Okng,https://arbitrum-sepolia.infura.io/v3/07bed2c1a3254edab8ef08fd9636532e"
+export RPC_ENDPOINTS_BSSP="https://base-sepolia.g.alchemy.com/v2/jUwBIRQ5knBpowzY_uyP9HSpxwqqyFc2,https://base-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-,https://base-sepolia.g.alchemy.com/v2/s9be-rgIj3nI63sMjGQMLiV97cM3Okng,https://base-sepolia.infura.io/v3/07bed2c1a3254edab8ef08fd9636532e"
+export RPC_ENDPOINTS_BLSS="https://blast-sepolia.g.alchemy.com/v2/jUwBIRQ5knBpowzY_uyP9HSpxwqqyFc2,https://blast-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-,https://blast-sepolia.g.alchemy.com/v2/s9be-rgIj3nI63sMjGQMLiV97cM3Okng,https://blast-sepolia.infura.io/v3/07bed2c1a3254edab8ef08fd9636532e"
+export RPC_ENDPOINTS_OPSP="https://opt-sepolia.g.alchemy.com/v2/jUwBIRQ5knBpowzY_uyP9HSpxwqqyFc2,https://opt-sepolia.g.alchemy.com/v2/EpoHD4vD3xnc219f7R-5ukj4ZXFbvGY-,https://opt-sepolia.g.alchemy.com/v2/s9be-rgIj3nI63sMjGQMLiV97cM3Okng,https://optimism-sepolia.infura.io/v3/07bed2c1a3254edab8ef08fd9636532e"
 
 sleep 2
 echo "Starting the Executor..."
