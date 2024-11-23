@@ -43,7 +43,7 @@ echo -e "\nPrivate key has been set."
 echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
-
+export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=true
 sleep 2
 echo "Starting the Executor..."
 ./executor
