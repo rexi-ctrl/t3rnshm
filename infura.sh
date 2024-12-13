@@ -33,9 +33,14 @@ export NODE_ENV=testnet
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
 
-read -p "Executor Process Order (input true atau false): " KEY_TRUE_FALSE
+
 export EXECUTOR_PROCESS_ORDERS=true
 export EXECUTOR_PROCESS_CLAIMS=true
+
+read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
+export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
+echo -e "\nPrivate key has been set."
+echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
