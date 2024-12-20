@@ -50,7 +50,7 @@ export RPC_ENDPOINTS_ARBT="https://arb-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 export RPC_ENDPOINTS_BSSP="https://base-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 export RPC_ENDPOINTS_BLSS="https://blast-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 export RPC_ENDPOINTS_OPSP="https://opt-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
-export EXECUTOR_MAX_L3_GAS_PRICE=50
+export EXECUTOR_MAX_L3_GAS_PRICE=200
 export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
 
 sleep 2
