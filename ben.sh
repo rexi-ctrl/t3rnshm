@@ -9,6 +9,9 @@ sleep 1
 sudo apt -q update
 sudo apt -qy upgrade
 
+sudo apt-get install figlet
+figlet -f /usr/share/figlet/starwars.flf
+
 
 EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.29.0/executor-linux-v0.29.0.tar.gz"
 EXECUTOR_FILE="executor-linux-v0.29.0.tar.gz"
@@ -36,6 +39,8 @@ export LOG_PRETTY=false
 read -p "Executor Process Order (input true atau false): " KEY_TRUE_FALSE
 export EXECUTOR_PROCESS_ORDERS=$KEY_TRUE_FALSE
 export EXECUTOR_PROCESS_CLAIMS=true
+export EXECUTOR_MAX_L3_GAS_PRICE=400
+export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
 
 read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
 export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
@@ -50,8 +55,7 @@ export RPC_ENDPOINTS_ARBT="https://arb-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 export RPC_ENDPOINTS_BSSP="https://base-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 export RPC_ENDPOINTS_BLSS="https://blast-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 export RPC_ENDPOINTS_OPSP="https://opt-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
-export EXECUTOR_MAX_L3_GAS_PRICE=10
-export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
+
 
 sleep 2
 echo "Starting the Executor..."
