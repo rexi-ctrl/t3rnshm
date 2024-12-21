@@ -6,38 +6,25 @@ sleep 1
 cd $HOME
 rm -rf executor
 sleep 1
-sudo apt -q update
-sudo apt -qy upgrade
+sudo apt update
+sudo apt upgrade
 
 sudo apt-get install figlet
 figlet -f /usr/share/figlet/starwars.flf
 
+LATEST_VERSION=$(curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | grep 'tag_name' | cut -d\" -f4)
+EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/${LATEST_VERSION}/executor-linux-${LATEST_VERSION}.tar.gz"
+curl -L -o executor-linux-${LATEST_VERSION}.tar.gz $EXECUTOR_URL
 
-EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.29.0/executor-linux-v0.29.0.tar.gz"
-EXECUTOR_FILE="executor-linux-v0.29.0.tar.gz"
-
-echo "Downloading the Executor binary from $EXECUTOR_URL..."
-curl -L -o $EXECUTOR_FILE $EXECUTOR_URL
-
-if [ $? -ne 0 ]; then
-    echo "Failed to download the Executor binary. Please check your internet connection and try again."
-    exit 1
-fi
-
-echo "Extracting the binary..."
-tar -xzvf $EXECUTOR_FILE
-rm -rf $EXECUTOR_FILE
+tar -xzvf executor-linux-${LATEST_VERSION}.tar.gz
+rm -rf executor-linux-${LATEST_VERSION}.tar.gz
 cd executor/executor/bin
 
-echo "Binary downloaded and extracted successfully."
-echo
-
 export NODE_ENV=testnet
+
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
-
-read -p "Executor Process Order (input true atau false): " KEY_TRUE_FALSE
-export EXECUTOR_PROCESS_ORDERS=$KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_ORDERS=true
 export EXECUTOR_PROCESS_CLAIMS=true
 export EXECUTOR_MAX_L3_GAS_PRICE=500
 export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
