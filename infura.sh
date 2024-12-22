@@ -37,7 +37,7 @@ echo
 
 export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
-read -p "KEY ALCHEMY: " KEYALCHEMY
+read -p "KEY INFURA: " KEYALCHEMY
 
 export RPC_ENDPOINTS_ARBT="https://arbitrum-sepolia.infura.io/v3/$KEYALCHEMY"
 export RPC_ENDPOINTS_BSSP="https://base-sepolia.infura.io/v3/$KEYALCHEMY"
