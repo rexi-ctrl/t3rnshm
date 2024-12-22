@@ -24,9 +24,10 @@ export NODE_ENV=testnet
 
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
-export EXECUTOR_PROCESS_ORDERS=true
+read -p "Executor Process Order (input true atau false): " KEY_TRUE_FALSE
+export EXECUTOR_PROCESS_ORDERS=$KEY_TRUE_FALSE
 export EXECUTOR_PROCESS_CLAIMS=true
-export EXECUTOR_MAX_L3_GAS_PRICE=500
+export EXECUTOR_MAX_L3_GAS_PRICE=1000
 export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
 
 read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
